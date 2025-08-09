@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for the document -->
+  <meta charset="UTF-8" />
+  <!-- Responsive design meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Title of the webpage -->
+  <title>Chat Application</title>
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Join Screen: displayed initially for user to enter their name and join chat -->
+  <div id="join-screen" class="centered">
+    <!-- Input field to enter username -->
+    <input type="text" id="username" placeholder="Enter your name" />
+    <!-- Button to join chat, triggers joinChat() function in JavaScript -->
+    <button onclick="joinChat()">Join Chat</button>
+  </div>
+
+  <!-- Chat Screen: hidden initially, shown after user joins -->
+  <div id="chat-screen" class="hidden">
+    <header>
+      <!-- Title of chat room -->
+      <h2>Chat Room</h2>
+
+      <!-- Container for displaying online users -->
+      <div id="onlineUsersContainer">
+        <h3>Online Users</h3>
+        <!-- List to show usernames currently online -->
+        <ul id="userList"></ul>
+      </div>
+    </header>
+
+    <!-- Main chat message container where all messages will appear -->
+    <div id="chat-container"></div>
+
+    <!-- Form to input and send messages -->
+    <form id="messageForm">
+      <!-- Text input for typing chat message -->
+      <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" />
+      <!-- File input to upload and send images -->
+      <input type="file" id="imageInput" accept="image/*" />
+      <!-- Submit button to send message -->
+      <button type="submit">Send</button>
+      <!-- Button to toggle emoji picker panel -->
+      <button type="button" onclick="toggleEmojiPicker()">😊</button>
+    </form>
+
+    <!-- Hidden emoji picker container, toggled visible on emoji button click -->
+    <div id="emojiPicker" class="hidden"></div>
+  </div>
+
+  <!-- Load Socket.io client library for real-time communication -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Load custom JavaScript code for chat functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
