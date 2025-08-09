@@ -45,3 +45,5 @@ Make sure you have:
 - **Node.js** (v14 or above) installed
 - **npm** (comes with Node.js)
 
+# output
+<img width="1903" height="892" alt="Image" src="https://github.com/user-attachments/assets/077509df-fd6e-44c4-b582-c57dd0957c98" />
