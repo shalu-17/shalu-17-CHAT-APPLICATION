@@ -25,7 +25,7 @@ The application is designed to provide a **modern chat interface** with visually
 ---
 
 ## 🛠️ Technologies Used
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla JS)
+- **Frontend:** HTML5, CSS3, JavaScript 
 - **Backend:** Node.js with Express framework
 - **Real-Time Communication:** Socket.IO
 - **Styling:** Custom CSS with gradients and responsive design
